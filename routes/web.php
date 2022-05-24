@@ -16,3 +16,19 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+
+$router->get('/saludo',function(){
+    return 'Hola';
+});
+
+$router->post('/saludo', function (){
+    return 'Se creo un dato';
+});
+
+$router->post('/informacion', function (){
+    return 'Subir los ejemplos';
+});
+
+$router->get('/ejemplo', function (){
+    return 'Subir a git';
+});
