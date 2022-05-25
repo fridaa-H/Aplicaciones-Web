@@ -17,18 +17,12 @@ $router->get('/', function () use ($router) {
     return $router->app->version();
 });
 
-$router->get('/saludo',function(){
-    return 'Hola';
-});
-
-$router->post('/saludo', function (){
-    return 'Se creo un dato';
-});
-
-$router->post('/informacion', function (){
-    return 'Subir los ejemplos';
-});
-
-$router->get('/ejemplo', function (){
-    return 'Subir a git';
+$router->get('/calcular/{edad}', function($edad){
+if($edad>0 & $edad <18){
+    return 'Eres menor de edad';
+} elseif ($edad >= 18 && $edad <= 100) {
+    return 'Eres mayor de edad';
+} else {
+    return 'Edad erronea';
+}
 });
